@@ -3,7 +3,7 @@ FROM python:3-stretch
 WORKDIR /var/www
 RUN apt-get update
 RUN apt-get -q update --fix-missing
-RUN apt-get -q install -y openslide-tools python-openslide vim
+RUN apt-get -q install -y --allow-unauthenticated openslide-tools python-openslide vim 
 RUN apt-get -q install -y libvips libvips-dev
 
 RUN pip install pyvips
